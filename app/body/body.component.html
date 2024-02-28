@@ -1,0 +1,45 @@
+<p>body works!</p>
+{{full_name}}
+
+<button type="button" (click)="changeName()">change name</button>
+<hr>
+<h2>Program: {{program}}</h2>
+<input type="text" [(ngModel)]="program">
+
+
+<button type="button" (click)="toggle()">Toggle Visibility</button>
+<h1 *ngIf="isVisible">tilaplapya</h1>
+
+
+
+<h1>ngfor directive</h1>
+<div *ngFor="let movie of movieArray">
+    <h2>{{movie}}</h2>
+</div>
+
+<input type="text" [(ngModel)]="newMovie">
+<button type="button" (click)="addMovie()">add movie</button>
+
+<button type="button" (click)="getEmployees()">get get</button>
+<div class="container">
+    <table class="table table-dark">
+      <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        
+        <tbody *ngFor="let employee of employees; let i = index;">
+            <tr>
+                <th scope="row">{{ i + 1}}</th>
+                <td>{{ employee.FIRST_NAME }}</td>
+                <td>{{ employee.LAST_NAME }}</td>
+                <td>{{ employee.EMAIL }}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
